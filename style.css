@@ -1,0 +1,29 @@
+
+
+p {
+    color: white
+}
+
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    width: 10em;
+    text-align: center;
+    background-color: #cb2845;;
+    border: 0;
+    border-radius: 0.75rem;
+    margin-top: 1.5rem;
+    min-height: 1.5rem;
+    color: white;
+    
+}
+
+.button:hover, a:hover{
+    opacity: 70%;
+}
