@@ -12,16 +12,26 @@ body {
     align-items: center;
 }
 
-.button {
+.button{
     width: 10em;
     text-align: center;
     background-color: #cb2845;;
     border: 0;
     border-radius: 0.75rem;
-    margin-top: 1.5rem;
+
     min-height: 1.5rem;
     color: white;
     
+}
+
+.search {
+    width: 10em;
+    text-align: center;
+    border: 0, solid, black;
+    border-radius: 0.75rem;
+    margin-top: 2.5rem;
+    min-height: 1.5rem;
+
 }
 
 .button:hover, a:hover{
