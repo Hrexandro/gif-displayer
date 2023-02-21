@@ -22,6 +22,7 @@ body {
     min-height: 1.5rem;
     color: white;
     
+    
 }
 
 .search {
@@ -35,5 +36,15 @@ body {
 }
 
 .button:hover, a:hover{
-    opacity: 70%;
+    text-decoration: underline;
 }
+
+.animated {
+    animation: fade 1000ms ease-in-out;
+}
+
+@keyframes fade {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
+  }
