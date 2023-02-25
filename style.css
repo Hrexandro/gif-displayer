@@ -40,11 +40,11 @@ body {
 }
 
 .animated {
-    animation: fade 1000ms ease-in-out;
+    animation: fade 1000ms ease-in-out infinite;
 }
 
 @keyframes fade {
     0% { opacity: 1; }
     50% { opacity: 0; }
-    100% { opacity: 0; }
+    100% { opacity: 1; }
   }

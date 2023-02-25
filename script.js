@@ -9,19 +9,17 @@ function clearAnimations (){
     Array.from(document.getElementsByClassName("button")).forEach((element) => {element.classList.remove("animated")})
 }
 
-function fetchImage(){
-    fetch(`https://api.giphy.com/v1/gifs/translate?api_key=BswaVFI9nEK0O8Qm7LJzNYQ4KCgbLYlU&s=${searchedPhrase}`, {mode: 'cors'})
-    .then(function(response){
-        return response.json()
-    })
-    .then(function(response){
-        img.src = response.data.images.original.url
-        clearAnimations()
-    }) .catch((error) => {
+async function fetchImage(){
+    try {
+        let fetchedImage = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=BswaVFI9nEK0O8Qm7LJzNYQ4KCgbLYlU&s=${searchedPhrase}`, {mode: 'cors'})
+        let fetchedResult = await fetchedImage.json()
+        img.src = fetchedResult.data.images.original.url
+    } catch (error) {
         console.log(error)
         img.src = "./placeholder.png"
+    } finally {
         clearAnimations()
-    })
+    }
 }
 
 const refreshButton = document.getElementById('button1')
